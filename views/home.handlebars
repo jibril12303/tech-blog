@@ -1,0 +1,11 @@
+<section class="container">
+  {{#each posts}}
+    <div class="border border-2 border-danger mt-4" >
+      <div class="bg-danger p-2 d-flex justify-content-between" onclick="window.location.pathname= `/posts/{{id}}`">
+        <h4>{{title}}</h4>
+        <p>Power by <strong>{{User.userName}} </strong> on {{ dateFormat createdAt }}</p>
+      </div>
+      <p class="p-2">{{content}}</p>
+    </div>
+  {{/each}}
+</section>

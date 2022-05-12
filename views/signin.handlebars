@@ -1,0 +1,29 @@
+<div class="container pt-5">
+  <div class="border border-2 border-danger">
+    <p class="bg-danger p-2 text-white">Login</p>
+    <form method="post" action="/user/signin" class="p-2">
+      <div class="mb-3">
+        <label for="username" class="form-label">User</label>
+        <input
+          type="text"
+          class="form-control"
+          name="username"  
+          id="username"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          name="password"
+          class="form-control"
+          id="password"
+        />
+      </div>
+      <button type="submit" class="btn btn-secondary w-100">Submit</button>
+       <a href="/user/signup" class="link-primary">signup instead</a>
+    </form>
+  </div>
+
+</div>

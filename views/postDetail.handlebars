@@ -1,0 +1,43 @@
+<section class="container">
+  {{!-- {{#each post}} --}}
+    <div class="border border-2 border-danger mt-4">
+      <div class="bg-danger p-2 d-flex justify-content-between">
+        <h4>{{this.post.title}}</h4>
+        <p>Power by <strong>{{post.User.userName}}</strong> on {{post.createdAt}}</p>
+      </div>
+      <p class="p-2">{{post.content}}</p>
+    </div>
+
+  {{!-- {{/each}} --}}
+
+  <div class="card mt-3">
+    <div class="card-header">
+    </div>
+    <div class="card-body">
+      {{#each comments}}
+        <blockquote class="blockquote mb-2 border p-2">
+          <p>{{content}}</p>
+          <footer class="blockquote-footer">{{User.userName}}
+          </footer>
+        </blockquote>
+      {{/each}}
+    </div>
+  </div>
+
+    <div class="border border-2 border-danger mt-3">
+      <p class="bg-danger p-2 text-white">comment</p>
+      <form method="post" action="/post/comment/{{post.id}}" class="p-2">
+        <div class="mb-3">
+          <label for="comment" class="form-label">Comment</label>
+          <input
+            type="text"
+            class="form-control"
+            name="comment"
+            id="comment"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <button type="submit" class="btn btn-secondary w-100">Submit</button>
+      </form>
+    </div>
+</section>

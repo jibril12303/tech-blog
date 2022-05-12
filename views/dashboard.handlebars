@@ -1,0 +1,15 @@
+<section class="dashboard-section">
+    {{#each posts}}
+    <div class="border border-2 border-danger mt-4">
+      <div
+        class="bg-danger p-2 d-flex justify-content-between"
+        onclick="window.location.pathname= `/posts/edit/{{id}}`"
+      >
+        <h4>{{title}}</h4>
+        <p>{{dateFormat createdAt}}</p>
+      </div>
+    </div>
+  {{/each}}
+    <a href="/post/add" class="btn btn-danger newpost_btn">New Post</a>
+
+</section>
